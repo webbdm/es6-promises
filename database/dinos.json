@@ -1,18 +1,21 @@
 {
   "dinos": [
     {
+      "type": 2,
       "name": "Peter",
       "image": "http://www.expodinoworld.be/wp-content/uploads/2017/04/dino3-1-300x300.png",
       "description": "It is not recommended to keep this pet in an apartment complex.",
       "kid-friendly": false
     },
     {
+      "type": 2,
       "name": "Rex",
       "image": "https://s-media-cache-ak0.pinimg.com/736x/a8/9e/42/a89e4294e56e1a59d6130e16eb49bf5c.jpg",
       "description": "Not house trained but works well on-leash and in public places.",
       "kid-friendly": false
     },
     {
+      "type": 2,
       "name": "Littlefoot",
       "image": "http://www.sproutonline.com/sites/sprout/files/LBT_Avatar.png",
       "description": "Young plant-eating dinosaur, orphaned after his mother perished while protecting him from a vicious carnivore.",

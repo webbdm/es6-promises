@@ -1,18 +1,21 @@
 {
   "cats": [
     {
+      "type": 1,
       "name": "Boots",
       "image": "http://global-cdn.skinnyms.com/wp-content/uploads/2014/11/5-Ways-to-Help-Overweight-Pets-Slim-Down-300x300-300x300.png",
       "description": "I mean, it's a cat. It does its own shit but makes you pick it up.",
       "kid-friendly": true
     },
     {
+      "type": 1,
       "name": "Frank",
       "image": "http://3milliondogs.com/blog-assets-two/2016/02/japanese-grumpy-cat-angry-koyuki-moflicious-3-300x300.jpg",
       "description": "Will knock over your drinks, dig in your plants and urinate on your laundry.",
       "kid-friendly": false
     },
     {
+      "type": 1,
       "name": "Scaredy Cat",
       "image": "http://www.our-happy-cat.com/images/fearful-cat.jpg",
       "description": "Freaks out when it sees its own shadow.",

@@ -2,20 +2,20 @@
   "humans": [
     {
       "name": "Betty",
-      "image": "http://img1.zergnet.com/1493228_300.jpg",
-      "interested-in": ["cats"],
+      "image": "https://s-media-cache-ak0.pinimg.com/736x/50/4f/55/504f55c1b3904a81559d89db4a0a709b.jpg",
+      "interested-in": [1],
       "has-kids": false
     },
     {
       "name": "Eric",
-      "image": "http://img5.zergnet.com/1544802_300.jpg",
-      "interested-in": ["dinos", "dogs"],
+      "image": "https://s-media-cache-ak0.pinimg.com/736x/29/4b/0e/294b0e38340cb226a864a096b7d3557f.jpg",
+      "interested-in": [2, 3],
       "has-kids": false
     },
     {
       "name": "Frances",
       "image": "http://images.parents.mdpcdn.com/sites/parents.com/files/styles/width_300/public/images/p_101562444.jpg",
-      "interested-in": ["dogs", "cats", "dinos"],
+      "interested-in": [1, 2, 3],
       "has-kids": true
     }
   ]
