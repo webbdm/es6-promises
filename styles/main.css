@@ -1,3 +1,18 @@
 body {
   background-color: slategray;
 }
+
+.overflow-row {
+  display: flex;
+  overflow-x: auto;
+}
+
+.human {
+  margin: 50px 0;
+}
+
+.animal {
+  width: 400px;
+  margin: 0 10px;
+  background-color: white;
+}
