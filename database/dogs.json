@@ -1,9 +1,21 @@
 {
   "dogs": [
     {
-      "name": "",
-      "image": "",
-      "description": "",
+      "name": "Rufus",
+      "image": "https://s-media-cache-ak0.pinimg.com/736x/41/5f/52/415f521aca6097cbb07f4196c0dc2617.jpg",
+      "description": "Absolutely adorable puppy. Is awesome. Uses the toilet like a human.",
+      "kid-friendly": true
+    },
+    {
+      "name": "Rover",
+      "image": "https://s-media-cache-ak0.pinimg.com/736x/bd/c9/43/bdc943495cba64c171442b9e56e265cd.jpg",
+      "description": "Beautiful and articulate puppy. Speaks French and Portugese.",
+      "kid-friendly": true
+    },
+    {
+      "name": "Clifford",
+      "image": "https://s-media-cache-ak0.pinimg.com/736x/6c/13/7e/6c137eab63d725e4be0b92dfdc9aea8e.jpg",
+      "description": "Perfect for defending your home and gold bars burried in your yard.",
       "kid-friendly": false
     }
   ]
