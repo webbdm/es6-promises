@@ -1,11 +1,22 @@
 {
   "humans": [
     {
-      "name": "",
-      "image": "",
-      "description": "",
-      "interested-in": [],
+      "name": "Betty",
+      "image": "http://img1.zergnet.com/1493228_300.jpg",
+      "interested-in": ["cats"],
       "has-kids": false
+    },
+    {
+      "name": "Eric",
+      "image": "http://img5.zergnet.com/1544802_300.jpg",
+      "interested-in": ["dinos", "dogs"],
+      "has-kids": false
+    },
+    {
+      "name": "Frances",
+      "image": "http://images.parents.mdpcdn.com/sites/parents.com/files/styles/width_300/public/images/p_101562444.jpg",
+      "interested-in": ["dogs", "cats", "dinos"],
+      "has-kids": true
     }
   ]
 }
