@@ -55,23 +55,82 @@ $(document).ready(function() {
     var myHumans = [];
     var myAnimals = [];
 
+    var checkForTypeMatch = function(human, pet) {
+        var interestedInArray = human["interested-in"];
+
+        var isMatchNumber = interestedInArray.indexOf(pet.type);
+        if (isMatchNumber === -1) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    var outputContainer = $("#output");
+
+    var writeToDOM = function(humanArray) {
+        var domString = "";
+        for (var i = 0; i < humanArray.length; i++) {
+            domString += `<div class="human row">`;
+            domString += `<div class="col-sm-4">`;
+            domString += `<img src="${humanArray[i].image}">`;
+            domString += `<p>${humanArray[i].name}</p>`;
+            domString += `</div>`;
+            domString += `<div class="col-sm-8 overflow-row">`;
+            for (var j = 0; j < humanArray[i].matches.length; j++) {
+                domString += `<div class="animal">`;
+                domString += `<img src="${humanArray[i].matches[j].image}">`;
+                domString += `<p>${humanArray[i].matches[j].name}</p>`;
+                domString += `<p>${humanArray[i].matches[j].description}</p>`;
+                domString += `</div>`;
+            }
+            domString += `</div>`;
+            domString += `</div>`;
+        }
+        outputContainer.append(domString);
+    };
+
+    var checkForKidFriendly = function(human, pet) {
+        var hasKids = human["has-kids"];
+        var isKidFriendly = pet["kid-friendly"];
+        var isMatched = true;
+        if (hasKids && !isKidFriendly) {
+            isMatched = false;
+        }
+        return isMatched;
+    };
+
 
     loadHumans().then(function(humans) {
         humans.forEach(function(human) {
+            human.matches = [];
             myHumans.push(human);
         });
-    });
 
-
-    Promise.all([loadDogs(), loadCats(), loadDinos()])
-        .then(function(result) {
-            result.forEach(function(xhrResult) {
-                xhrResult.forEach(function(animal) {
-                    myAnimals.push(animal);
+        Promise.all([loadDogs(), loadCats(), loadDinos()])
+            .then(function(result) {
+                result.forEach(function(xhrResult) {
+                    xhrResult.forEach(function(animal) {
+                        myAnimals.push(animal);
+                    });
                 });
-            });
-            console.log(myAnimals);
-        });
 
+                for (var i = 0; i < myHumans.length; i++) {
+                    for (var j = 0; j < myAnimals.length; j++) {
+                        if (checkForTypeMatch(myHumans[i], myAnimals[j]) && checkForKidFriendly(myHumans[i], myAnimals[j])) {
+                            myHumans[i].matches.push(myAnimals[j]);
+                            // run writeDOM
+                        }
+                    }
+                }
+                writeToDOM(myHumans);
+            })
+            .catch(function(animalErrors){
+            	console.log(animalErrors);
+            });
+    })
+    .catch(function(humanError){
+    	console.log(humanError);
+    });
 
 });
